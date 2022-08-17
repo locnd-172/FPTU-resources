@@ -1,0 +1,20 @@
+- include file prototype, library
+- Code start:
+	.code
+
+- comment line
+	; comment goes here
+
+- comment block
+	comment  * <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	
+	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< *
+- data type
+	
+- Các thanh ghi đa năng có thể được chia thành 3 nhóm:
+
+	Nhóm thanh ghi dữ liệu
+	Nhóm thanh ghi con trỏ
+	Nhóm thanh ghi chỉ số
+
+OFFSET 

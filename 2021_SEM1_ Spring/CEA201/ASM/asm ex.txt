@@ -1,0 +1,7 @@
+1. Tìm căn bậc hai của N
+2. Kiểm tra số nguyên tố
+3. In số lớn nhất trong 3 số
+4. Tính giá trị trung bình của tổng các số từ a -> b 
+5. Tính số mũ (a^N)
+6. In các số nguyên tố từ 1-N	
+7. Sắp xếp tăng dần a, b, c

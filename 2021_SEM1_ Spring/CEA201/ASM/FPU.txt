@@ -1,0 +1,21 @@
+p=1
+i:1-N
+(p=p*i)
+
+f[i] = f[i-1] + f[i-2]
+
+
+Move/ copy th single-precision value from memory to pfu stacks
+*before using pfu stack, reset to it dafault value
+	finit		;reset fpu
+	fld	dword ptr a ;push a to fpu stack
+	fld 	dword ptr b ;push b
+	fld 	dword ptr c ;push c
+
+
+Single-precision: DWORD
+Double-precision: QWORD
+Extended_precision: TBYTE
+
+
+	

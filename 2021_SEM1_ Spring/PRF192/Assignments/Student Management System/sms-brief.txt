@@ -1,0 +1,37 @@
+SINH VIÊN:
+	1. Thêm thông tin cá nhân
+		Họ tên, Số điện thoại, Email, Địa chỉ, Mã SV
+
+	2. Đăng ký học phần, cập nhật học phần (Sửa, xóa)
+		Hiển thị các khóa kèm giảng viên của khóa đó
+		Cho sinh viên chọn
+		1. Regiser courses
+		2. Update registered course 
+		3. Cancel registration
+	
+	3. Chế độ xem cá nhân
+		Xem thông tin cá nhân
+		Đã đăng ký những học phần nào
+	
+
+CHUYÊN VIÊN
+	1. Tạo học sinh
+		Tên, Mã SV, Major 
+	
+	2. Tìm, sửa, xóa sinh viên
+
+	3. Thống kê: Danh sách sinh viên
+		Hiển thị theo format:
+			ID - Tên - Số học phần đã đky
+			Số SV tổng cộng	
+		
+	4. Tạo khóa học
+		Tên khóa, Kỳ, Số lượng SV yêu cầu, Giảng viên 
+
+	5. Danh sách khóa học
+		Hiển thị:
+			Năm - Kỳ - Khóa học - Giảng viên - Số SV đky - Trạng thái (Có thể mở / Chưa thể mở)
+
+	6. Chỉnh sửa khóa học
+		*sửa thông tin giảng viên, số require, số max
+		*xóa khóa
