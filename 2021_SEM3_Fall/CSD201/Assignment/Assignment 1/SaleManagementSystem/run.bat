@@ -1,0 +1,4 @@
+cd build/classes
+cls
+java salemanagementsystem.SaleManagementSystem
+pause

@@ -1,0 +1,11 @@
+David Loshin,
+Chapter 17 - Knowledge Discovery and Data Mining for Predictive Analytics,
+Editor(s): David Loshin,
+In MK Series on Business Intelligence,
+Business Intelligence (Second Edition),
+Morgan Kaufmann,
+2013,
+Pages 271-286,
+ISBN 9780123858894,
+https://doi.org/10.1016/B978-0-12-385889-4.00017-X.
+(https://www.sciencedirect.com/science/article/pii/B978012385889400017X)

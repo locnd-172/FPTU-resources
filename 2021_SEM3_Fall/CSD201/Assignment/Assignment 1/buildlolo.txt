@@ -1,0 +1,7 @@
+No | CODE | NAME      | QUANTITY | SALED | PRICE | TOT. VALUE
+01 | P03  | Sugar     | 12       | 3     | 25.10 | 75.30 
+02 | P01  | Miliket   | 10       | 5     | 5.20  | 26.00 
+03 | P02  | Apple     | 5        | 2     | 4.30  | 8.60  
+04 | P05  | Rose      | 7        | 6     | 15.40 | 92.40 
+05 | P07  | Beer      | 11       | 3     | 12.20 | 36.60 
+06 | P04  | Book      | 9        | 5     | 5.20  | 26.00 

@@ -1,0 +1,188 @@
+package transactionencode;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+
+/**
+ *
+ * @author LocNgD <locndse160199@fpt.edu.vn>
+ */
+public class TransactionEncode {
+
+    static Scanner sc = new Scanner(System.in);
+    static ArrayList<ArrayList<String>> list = new ArrayList<>();
+    static ArrayList<String> transID = new ArrayList<>();
+    
+    //static String[] atbList;
+    static ArrayList<String> atbList = new ArrayList<>();
+    static HashMap<String, Integer> set;
+    static String fileName;
+    
+    // key: TID | value: itemID
+    static HashMap<String, ArrayList<String>> itemList;
+    static int N, M;
+    
+    //static int[][] table;
+    static ArrayList<ArrayList<Integer>> table = new ArrayList<>();
+    
+    public static void main(String[] args) throws Exception {
+        loadData();
+        buildTable();
+        writeWekaFile();
+        writeFile();
+    }
+    
+    public static String getFilename(String s) {
+        int it1 = 0, it2 = 0;
+        for (int i = s.length() - 1; i >= 0; --i) {
+            if (s.charAt(i)== '.') it2 = i;
+            if (s.charAt(i) == '\\') {
+                it1 = i + 1;
+                break;
+            }
+        }
+        String name = s.substring(it1, it2);
+        return name;
+    }
+    
+    public static void loadData() throws Exception {
+        System.out.print("File name: ");
+        String path = "F:\\CSD\\ASS2\\TransactionEncode\\france.csv";
+        fileName = getFilename(path);
+        System.out.println(fileName);
+        
+        File f = new File(path);
+        Scanner fi = new Scanner(f);
+        itemList = new HashMap<>();
+        
+        try {
+            if (!f.exists())
+                throw new Exception("The file does not exist! Try another file name...");
+            if (f.length() == 0)
+                throw new Exception("The file is empty! Add some data and try again...");
+            
+            while (fi.hasNext()) {
+                String[] s = fi.nextLine().split(",");
+                String TID = s[0];
+                String itemId = s[1];
+                ArrayList<String> curItems;
+                if (!itemList.containsKey(TID)) {
+                    curItems = new ArrayList<>();
+                    curItems.add(itemId);
+                } else {
+                    curItems = itemList.get(TID);
+                    curItems.add(itemId);
+                }
+                itemList.put(TID, curItems);
+            }
+            
+        } catch (IOException e) {
+        }
+    }
+    
+    public static void buildTable() {
+        itemList.entrySet().forEach(entry -> {
+            String TID = entry.getKey();
+            transID.add(TID);
+            ArrayList<String> items = entry.getValue();
+            Collections.sort(items);
+            list.add(items);
+            N++;
+            table.add(new ArrayList<>());
+        });
+        
+        set = new HashMap<>();
+        
+        int cnt = 0;
+        for (ArrayList<String> el : list) 
+            for (String s : el) 
+                if (!set.containsKey(s)) {
+                    atbList.add("");
+                    set.put(s, cnt); ++cnt;
+                }
+        M = cnt;
+        
+        //atbList = new String[M]; // no attribute
+        
+        set.entrySet().forEach(entry -> {
+            String atb = entry.getKey();
+            Integer pos = entry.getValue();
+            atbList.set(pos, atb);
+        });
+        
+        for (int i = 0; i < N; ++i) {
+            for (int j = 0; j < M; ++j) {
+                table.get(i).add(0);
+            }
+            for (int j = 0; j < list.get(i).size(); ++j) {
+                int pos = set.get(list.get(i).get(j));
+                table.get(i).set(pos, 1);
+            }
+        }
+    }
+    
+    public static void writeWekaFile() {
+        System.out.println("");
+        String s = "@relation fileitem\n\n";
+        
+        //s += "@attribute TID string\n";
+        for (int i = 0; i < atbList.size(); ++i) {
+            s += "@attribute " + atbList.get(i) + " {0,1}\n";
+        }
+        
+        s += "\n@data\n\n";
+        for (int i = 0; i < N; i++) {
+            //s +=  transID.get(i) + ",";
+            for (int j = 0; j < M; j++) {
+                s += table.get(i).get(j);
+                if (j != M - 1) s += ",";
+            }
+            s += "\n";
+        }
+        //System.out.println(s);
+        System.out.println("______________________________");
+        String file = fileName + ".arff";
+        File f = new File(file);
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(f);
+            pw.print(s);
+            pw.close();
+            System.out.println("WRITE .arff FILE SUCCESSFUL!");
+        } catch (FileNotFoundException e) {
+            System.err.println("WRITE FILE FAILED");
+        }
+      
+    }
+    
+    public static void writeFile() {
+        System.out.println("");
+        String s = "";
+        
+        for (ArrayList<String> el : list) {
+            for (String str : el) s += str + " ";
+            s += "\n";
+        }
+        
+        //System.out.println(s);
+        System.out.println("______________________________");
+        String file = fileName + ".txt";
+        File f = new File(file);
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(f);
+            pw.print(s);
+            pw.close();
+            System.out.println("WRITE .txt FILE SUCCESSFUL!");
+        } catch (FileNotFoundException e) {
+            System.err.println("WRITE FILE FAILED");
+        }
+      
+    }
+}
