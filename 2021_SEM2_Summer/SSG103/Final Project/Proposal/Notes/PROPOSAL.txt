@@ -1,0 +1,68 @@
+PDF:
+	+ Cover image
+	+ Cover letter
+	+ Big proposal title 
+	+ Table of contents
+	+ (Credits / Reference to authorization | List of illustrations)
+
+	+ Proposal summary / Overview / Introduction
+	+ (Problem / Current status) 
+	+ Solution
+	+ Purpose (clear and concise) / Goals
+	
+	+ Meet the team (team introduction)
+	+ Why us?
+
+	+ Time schedule
+	+ Cost
+
+	+ Glossary
+	+ Appendixes
+
+	+ Reference list
+	+ Ending
+
+
+WEB:
+	+ Landing page section 
+		- Product slogan / Team Tagline
+		
+	+ Cover letter
+	+ Overview / Introduction
+	+ Problem
+	+ Solution
+
+	+ Project scopes 
+	   - Project objectives / Goals
+	   - Deliverables: 
+		+ App prototype
+		+ Expect outcomes
+ 		+ Product
+		  - Product description
+		  - Standard of products
+	   - Project exclusions
+	   - Constraint / Binding: budget, time, progress quality
+   	   - Assumptions
+
+	   - Implementation
+		+ Project setup
+		+ Use-case scenarios
+		+ Target customers
+		+ Sitemap, content, wireframes
+		+ Visualization
+		+ Developement
+		+ Lanuching
+
+	+ Time schedule / Time frame / Milestone
+     
+	+ Team slogan
+	+ Who are we? - Dolphin Group
+	+ Meet the team
+	+ Why us?
+	
+	+ Cost (Pricing breakdown)
+	
+	+ Thanks for reading, We hope to hear form you as soon as possible
+	+ Our terms and conditions / Contract
+
+	+ Contact

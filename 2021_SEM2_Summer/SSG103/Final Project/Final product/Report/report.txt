@@ -1,0 +1,23 @@
++ format date của letter
++ "Within the attached report and document, you will find information about SmartAgri
+application and its components."
+	-> information about app, how we do its in project
+ 
++ chỉnh deliverables
+
++ sửa thì tương lai -> quá khứ 
+
++ Bỏ dòng "Smart Agri - a hybrid app for farmers to control their agricultural works as well as their
+productivity."
+
++ Conclusion sau SWOT analysis - bê đoạn cuối của
+
++ Chỉnh business plan
++ Thêm Target audience
+
++ Bỏ danh mục direct/indirect competitor
+
++ Project accomplishments & highlights
+
++ Bổ sung Gains & lessons
+
