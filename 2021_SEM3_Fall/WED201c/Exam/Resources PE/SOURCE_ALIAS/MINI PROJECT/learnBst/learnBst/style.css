@@ -1,0 +1,11 @@
+.image img{
+	height: 300px;
+	width: 100%;
+}
+.image{
+	background-color: white;
+	margin-top: 20px;
+}
+.footer{
+	background-color: #f5ad42;
+}

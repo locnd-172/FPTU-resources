@@ -1,0 +1,59 @@
+header{
+    background-color: #008a7b;
+    height: 170px;
+    text-align: center;
+   
+}
+header h1{
+    text-transform: uppercase;
+    display: inline-block;
+    color: #dd762c;
+    margin-bottom: 40px;
+}
+header nav a{
+    padding: 10px 40px;
+    background-color: #80c5bd;
+    border-radius: 5px;
+    margin: 20px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2491a2;
+}
+.active{
+    background-color: #ffcca4;
+    color: #ad6021;
+}
+.top{
+    text-align: center;
+    margin-top: 20px;
+}
+.top a img{
+    width: 200px;
+    height: 200px;
+}
+.bottom h2{
+ color: #58a2b3;
+ font-family: sans-serif;
+}
+#myform{
+    float: right;
+    background-color: #ffff99;
+    width: 30%;
+}
+#myform caption{
+    display: inline-block;
+    margin: 0;
+}
+
+#team{
+    float: left;
+}
+#team tr th{
+    background-color: #ff6600;
+}
+#team tr td{
+    background-color: #ff9966;
+}
+#showmore{
+    color: blue;
+}

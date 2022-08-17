@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+	<div class="login">
+		<div class="pass">
+			<input id="pass" type="password" placeholder="Enter password">
+			<img onclick="myfunction()" src="images/eye.jpg">
+		</div>		
+		<button>Login</button>
+
+	</div>
+
+	<script type="text/javascript">
+		var x = true;
+		function myfunction(){
+			if(x){
+				document.getElementById('pass').type = "text";
+				x = false;
+			}else{
+				document.getElementById('pass').type = "password";
+				x = true;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.header {
+    background-color: ffff66;
+    padding: 10px;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header nav a {
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 20px 0;
+    margin: 0 50px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.content {
+    padding: 1rem;
+}
+
+
+#left {
+    float: left;
+    width: 50%;
+}
+
+#right {
+    float: right;
+    /* display: inline-block; */
+}

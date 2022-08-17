@@ -1,0 +1,10 @@
+.my-table{
+margin: auto;
+}
+table input{
+    height: 25px;
+    width: 500px;
+}
+.btn{
+    text-align: center;
+}

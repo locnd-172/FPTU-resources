@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <input type="text" id="number" value="0">
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        var clear;
+        var getValue = function () {
+            var number = document.getElementById('number').value;
+            number++;
+            if (number == 500) {
+                number = 0;
+            }
+            document.getElementById('number').value = number;
+        }
+        function start() {
+           clear =  setInterval(getValue, 1);
+        }
+        function stop() {
+            clearInterval(clear);
+            var score = document.getElementById('number').value;
+            alert("your score is: "+score);
+            document.getElementById('number').value = 0;
+        }
+    </script>
+</body>
+
+</html>

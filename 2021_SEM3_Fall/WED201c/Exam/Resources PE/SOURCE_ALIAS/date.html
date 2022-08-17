@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input oninput="myfunction()" id="year" type="text">
+	<script type="text/javascript">
+		function myfunction(){
+			var x = new Date();
+			var day = x.getDate();
+			var month = x.getMonth()+1;
+			var year = x.getFullYear();
+			var y = document.getElementById('year').value;
+			if(y>year){
+				document.getElementById('year').style.borderColor = "red";
+			}else{
+				document.getElementById('year').style.borderColor = "green";
+			}
+		}
+	</script>
+
+</body>
+</html>

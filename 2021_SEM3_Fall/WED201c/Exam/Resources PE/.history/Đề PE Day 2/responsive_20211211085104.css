@@ -1,0 +1,21 @@
+.header {
+    background-color: ffff66;
+    padding: 10px;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header nav a {
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 10%;
+}

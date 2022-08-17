@@ -1,0 +1,48 @@
+header {
+  background-color: rgb(222, 224, 224);
+  margin: 2px 4px;
+}
+
+header h1 {
+  color: yellow;
+  text-align: center;
+  font-size: 3em;
+}
+
+header nav {
+  text-align: center;
+}
+
+header nav a {
+  font-size: 1.3em;
+  background-color: rgb(175, 175, 175);
+}
+
+header nav a:link {
+  color: black;
+}
+
+header nav a:visited {
+  color: rgb(68, 68, 68);
+}
+
+img {
+  display: none;
+}
+
+.right {
+  background-color: rgb(222, 224, 224);
+}
+
+.right h2 {
+  font-size: 2em;
+  color: rgb(133, 133, 133);
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  b
+}

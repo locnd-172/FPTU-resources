@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+body {
+  font-family: 'Raleway';
+  background: #f1f4f5;
+}
+
+header {
+  padding: 2%;
+  text-align: center;
+  background-image: url("../images/flywheel.jpg");
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #edfcfb;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #026149;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1%;
+  border-radius: 8px;
+
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1%;
+
+  color: #07352b;
+  text-align: center;
+  justify-content: center;
+
+  background-color: rgba(228, 238, 236, 0.534);
+  width: 160px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.active {
+  color: rgba(16, 70, 62, 0.918);
+  background-color: rgba(240, 255, 249, 0.973);
+}
+
+.left {
+  background-color: #c8d1ac;
+  width: 28%;
+  float: left;
+  padding: 1%;
+  justify-content: center;
+  text-align: center;
+}
+
+.left img {
+  border: solid 0.2px #c8d1ac;
+  width: 90%;
+  margin: 5% auto;
+}
+.right {
+  width: 63%;
+  display: inline-block;
+  padding: 0 30px;
+}
+
+.right p {
+  font-size: 1.1rem;
+  color: #222931;
+  text-align: justify;
+}
+
+.right a {
+  color: #009c75;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 10px -40px;
+}
+
+ul a {
+  font-size: 1rem;
+  color: #545f6d;
+}
+
+table {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  margin: 30px 0;
+}
+
+th {
+  border: 0.5px solid #11ffc3;
+  border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+  padding: 5px;
+  color: rgba(240, 255, 249, 0.973);
+  background-color: rgb(5, 43, 30);
+  background: linear-gradient(0deg, #054d3b 0%, #073328 100%);
+}
+
+tr {
+  text-align: center;
+  height: 35px;
+  background-color: #c8ebe2cb;
+  vertical-align: middle;
+}
+
+td {
+  color:#28443c;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px;
+  
+}
+
+td:first-child {
+  text-align: left;
+  padding: 0 5px;
+}
+
+tr:hover {
+  background-color: #c0e4db;
+  text-shadow: 1px 1px  #71ffd9b4;
+}

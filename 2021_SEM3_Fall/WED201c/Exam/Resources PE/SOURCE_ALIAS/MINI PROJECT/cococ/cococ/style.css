@@ -1,0 +1,31 @@
+.grid{
+	display: grid;
+	grid-template-columns: 320px 320px 320px;
+	grid-template-rows: 320px 320px 320px;
+	grid-gap: 10px;
+	margin: 0 auto;
+	width: 1000px;
+}
+.item{
+	border: 2px solid black;
+	border-radius: 10px;
+}
+.item img{
+	width: 315px;
+	height: 315px;
+	border-radius: 10px;
+}
+.item2{
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+.item2 img{
+	width: 630px;
+}
+.item6{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.item6 img{
+	width: 630px;
+}

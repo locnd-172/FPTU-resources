@@ -1,0 +1,31 @@
+aside a img{
+    display: none;
+}
+header{
+    text-align: center;
+    background-color: lightgrey;
+}
+header h1{
+    color: bisque;
+}
+header nav a{
+padding-left: 10px;
+padding-right: 10px;
+background-color: blue;
+}
+main{
+    margin-top: 20px;
+    background-color: lightgrey;
+}
+section table{
+width: 700px;
+}
+section table tr th{
+    background-color: lightsalmon;
+}
+table{
+    margin-left: 400px;
+}
+form{
+    display: none;
+}

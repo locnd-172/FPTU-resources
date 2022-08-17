@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .image{
+            margin: 300px;
+        }
+        .image img{
+            width: 1000px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image">
+        <img id="img" onclick="changeImage()" src="image1.jpg" alt="">
+    </div>
+    <script>
+        var index = 1;
+        changeImage = function(){
+            var imgs = ["image1.jpg","image2.jpg","image3.jpg"];
+            document.getElementById('img').src = imgs[index];
+            index++;
+            if(index==3){
+                index = 0;
+            }
+        }
+        setInterval(changeImage,1000);
+    </script>
+    
+</body>
+</html>

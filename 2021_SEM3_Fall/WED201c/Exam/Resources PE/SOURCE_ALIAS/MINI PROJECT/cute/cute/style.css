@@ -1,0 +1,91 @@
+.container{
+	width: 1000px;
+	height: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.header{
+	width: 1000px;
+	height: auto;
+	display: flex;
+}
+.banner{
+	width: 1000px;
+	height: auto;
+	
+}
+.banner img{
+	width: 1000px;
+	height: auto;
+	/*position: relative;*/
+}
+.banner h1{
+	position: absolute;
+	top: 100px;
+
+}
+.logo{
+	width: 40%;
+	height: auto;
+}
+.logo img{
+	width: 400px;
+	height: auto;
+}
+.menu{
+	width: 60%;
+	height: auto;
+}
+.menu ul{
+	list-style: none;
+}
+.menu ul li{
+	float: right;
+	padding-left: 25px;
+	color: #6fc2d2;
+	font-size: 25px;
+	margin-top: 55px;
+}
+.content{
+	width: 1000px;
+	height: auto;
+	display: flex;
+}
+.left{
+	width: 700px;
+	height: auto;
+}
+.left p{
+	font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #6fc2d2;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.title{
+	width: 600px;
+	font-size: 29px;
+    color: #87b133;
+}
+.description{
+	width: 600px;
+	font-size: 19px;
+	color: #6fc2d2;
+}
+
+
+
+.right{
+	width: 300px;
+	height: auto;
+}
+.right img{
+	width: 270px;
+	height: auto;
+}
+.right p{
+	font-size: 28px;
+    margin-bottom: 0px;
+}

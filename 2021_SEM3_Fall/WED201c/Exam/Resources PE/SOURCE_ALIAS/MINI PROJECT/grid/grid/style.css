@@ -1,0 +1,98 @@
+.grid-container{
+	display: grid;
+	grid-template-rows: 150px 150px 150px;
+	grid-template-columns: 150px 150px 150px 150px 150px 150px;
+	grid-gap: 10px;
+	margin: 0 auto;
+	width: 1000px;
+	margin-top: 20px;
+}
+.grid-item{
+	text-align: center;
+	/*line-height: 100px;*/
+	border-radius: 10px;
+	position: relative;
+}
+.grid-item img{
+	width: 150px;
+	height: 150px;
+	border-radius: 10px;
+}
+.item1{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.item2{
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.item1 img{
+	width: 310px;
+}
+.item2 img{
+	width: 310px;
+}
+.container{
+	width: 100%;
+	margin:0 auto;
+}
+.item1 h2{
+	position: absolute;
+	top: 90px;
+	margin-left: 20px;
+	color: white;
+	font-weight: bold;
+}
+.menu{
+	height: 120px;
+	background-color: rgb(255, 186, 0);
+}
+.menu ul{
+	list-style-type: none;
+	text-align: center;
+	padding-left: 400px;
+	height: 50px;
+	margin-top: 0px;
+}
+.menu ul li{
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+.menu ul li a{
+	text-decoration: none;
+	color: black;
+}
+.menu ul li a img{
+	vertical-align: middle;
+}
+.logo{
+	
+}
+.buttom{
+	width: 1000px;
+	margin: 0 auto;
+}
+.buttom input{
+	width: 500px;
+	height: 35px;
+	border-radius: 5px;
+	border:0;
+	padding-left: 10px;
+	font-size: 15px;
+}
+.buttom button{
+	border:0px;
+}
+.buttom button img{
+	width: 20px;
+	height: auto;
+	vertical-align: middle;
+}
+.search{
+	width: 550px;
+	background-color: white;
+	border-radius: 5px;
+}

@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+}
+
+#contact-form {
+    margin: 20px auto;
+    width: 700px;
+}
+
+.form-entry {
+    display: flex;
+    height: 30px;
+    margin: 5px 0;
+}
+
+.form-entry label {
+    width: 15%;
+}
+
+.form-entry input {
+    width: 75%;
+}
+
+.form-submit {
+    display: flex;
+}
+
+.form-submit button {
+    margin: 5px auto;
+}

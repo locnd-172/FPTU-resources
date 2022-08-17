@@ -1,0 +1,46 @@
+:root {
+    --gray-light: rgb(226, 226, 226);
+    --gray-dark: rgb(160, 160, 160);
+}
+
+.services {
+    padding-top: 20px;
+}
+
+.service-box {
+    position: relative;
+}
+
+.service-tittle {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 10px;
+}
+
+.service-tittle h3 {
+    font-size: 2.1rem;
+}
+
+.sub-tittle {
+    font-size: 2.2rem;
+    color: var(--gray-dark);
+}
+
+.prod-detail {
+    padding: 10px 10px 0 10px;
+    background-color: var(--gray-light);
+}
+
+.offer-tittle {
+    border-bottom: 2px dashed var(--gray-dark);
+}
+
+.footer {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}

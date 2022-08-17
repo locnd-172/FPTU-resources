@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+}
+
+.header img{
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+}
+
+.menu{
+    margin: auto 0;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.search{
+    margin: auto 0;
+    padding-left: 200px ;
+}
+
+.search input{
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+.search button{
+    background-color: black;
+    color: white;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu a{
+    margin-top: 50px;
+    display: inline-block;
+    margin: 1%;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+
+.banner img{
+    height: 50%;
+    width: 100%;
+}
+
+h1{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    color: rgb(7, 114, 114);
+}
+
+.marina{
+    display: flex;
+    border: solid 1px gray;
+    box-shadow: 1px 1px 5px 5px gray;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+.marina_content{
+    padding-left: 1%;
+}
+
+.summer{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.summer img{
+    width: 400px;
+    height: 345px;
+}
+
+.tour{
+    display: flex;
+    border: solid 1px gray;
+    box-shadow: 1px 1px 5px 5px gray;
+    width: 55%;
+    border-radius: 1%;
+}
+
+.tour2{
+    display: flex;
+    border: solid 1px gray;
+    box-shadow: 1px 1px 5px 5px gray;
+    width: 55%;
+    margin-left: 3%;
+    border-radius: 1%;
+}
+
+.tour_content{
+    padding-left: 1%;
+}
+
+.hotel{
+    display: flex;
+    width: 100%;
+}
+
+.hotel img{
+    height: 300px;
+    width: 300px;
+}
+
+.vivu{
+    text-align: center;
+    margin: 0 auto;
+    border: solid 1px gray;
+    box-shadow: 1px 1px 5px 5px gray;
+    border-radius: 1%;
+}
+
+.footer{
+    text-align: center;
+    color: white;
+    background-color:rgb(7, 114, 114);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5%;
+}
+
+.footer p{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.footer h5{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}

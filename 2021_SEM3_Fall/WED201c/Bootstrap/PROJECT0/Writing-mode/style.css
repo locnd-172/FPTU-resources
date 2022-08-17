@@ -1,0 +1,50 @@
+.wrapper {
+    position: relative;
+    padding-left: 70px;
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.section-title {
+    /*4 dòng đầu*/
+    position: absolute;
+    left: 0;
+    transform-origin: left top;
+    transform: rotate(90deg);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Arial";
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+
+/*
+.wrapper {
+    display: flex;
+}
+
+.section-title {
+    writing-mode: vertical-lr;
+}
+
+.grid {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}*/
+
+.grid__item {
+    -webkit-box-flex: 0;
+    flex: 0 0 48%;
+    height: 150px;
+    background: #e1e1e1;
+    padding: 1.35em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}

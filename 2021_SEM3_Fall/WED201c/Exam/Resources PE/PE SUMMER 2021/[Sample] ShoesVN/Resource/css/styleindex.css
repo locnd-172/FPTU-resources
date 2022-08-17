@@ -1,0 +1,40 @@
+.service-item{
+    background-color:rgba(0, 0, 0, 0.6);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 20px;
+}
+.service-row{
+    position: relative;
+    margin-bottom: 25px;
+}
+.sertice-item-titile{
+    font-size: 20px;
+}
+.combo-header-des{
+    color: rgb(190, 187, 187);
+    font-size: 20px;
+}
+.item{
+    background-color: rgb(226, 222, 222);
+    padding: 10px 10px 0px 10px;
+}
+.item-title{
+    border-bottom: 2px dashed rgb(134, 133, 133);
+}
+.item-description{
+    margin-bottom: 20px;
+}
+.order-header-des{
+    color: rgb(201, 194, 194);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.footer{
+    background-color: rgb(39, 38, 38);
+    color: #fff;
+    padding: 20px 0px;
+    margin-top: 25px;
+}

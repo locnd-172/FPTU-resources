@@ -1,0 +1,39 @@
+header{
+    height: 300px;
+    background-color: #ffff66;
+    text-align: center;
+}
+header h1{
+    font-size: 70px;
+    margin-top: 50px;
+    display: inline-block;
+}
+header nav a{
+    border: 1px solid black;
+    padding: 20px 200px;
+    margin-left: 50px;
+    border-radius: 50px;
+    background-color: white;
+    text-decoration: none;
+}
+footer{
+    height: 100px;
+    background-color: #ffff66;
+    text-align: center;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 20px;
+    clear: both;
+}
+#left{
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+}
+#center{
+    float:right;
+    width: 50%;
+}
+#para3{
+    color: blue;
+}

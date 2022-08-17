@@ -1,0 +1,145 @@
+body{
+	background-color: #e7e7e7;
+	font-family: sans-serif;
+}
+.container{
+	width: 886px;
+	height: auto;
+	margin: 0 auto;
+}
+.preheader{
+	width: 886px;
+	height: 71px;
+	background-image: url(../images/preheader.jpg);
+}
+.header{
+	width: 886px;
+	height: 78px;
+	background-image: url(../images/header.jpg);
+}
+.header h2{
+	color: white;
+	margin: 0;
+	padding-left: 78px;
+	padding-top: 5px;
+}
+.menu{
+	width: 886px;
+	height: 32px;
+	background-image: url(../images/menu.jpg);
+}
+.menu p{
+	margin: 0;
+	padding-left: 78px;
+	color: white;
+	line-height: 32px;
+	font-weight: bold;
+}
+.main{
+	width: 886px;
+	height: auto;
+	background-image: url(../images/bg.jpg);
+}
+.content{
+	width: 759px;
+	margin: 0 auto;
+	height: auto;
+	display: flex;
+}
+.left{
+	width: 70%;
+	height: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.title{
+	height: auto;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #42554e;
+}
+.image img{
+	width: 350px;
+}
+.description{
+	margin-top: 20px;
+	height: auto;
+	border-bottom: 1px solid lightgrey;
+	padding-bottom: 50px;
+}
+.author{
+	float: right;
+	height: 50px;
+	font-size: 10px;
+	padding-top: 10px;
+}
+.right{
+	width: 30%;
+	height: auto;
+	border-left: 2px dotted lightgrey;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.right h2{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	color: #42554e;
+}
+.right p{
+	margin:0;
+}
+.search input{
+	width: 120px;
+	border: 2px dotted #42554e;
+}
+.search button{
+	border:none;
+	background-color: white;
+	font-weight: bold;
+	color: grey;
+}
+.right ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.right ul li{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 15px;
+}
+.right ul li a{
+	color: #42554e;
+}
+.footer{
+	width: 886px;
+	height: 78px;
+	background-image: url(../images/footer.jpg);
+}
+
+.left ul{
+	list-style: none;
+	padding: 0;
+}
+.left ul li{
+	display: inline-block;
+}
+.left ul li img{
+	width: 250px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.pagging{
+	text-align: center;
+}
+.pagging a{
+	border: 1px solid black;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 3px;
+	font-weight: bold;
+}
