@@ -1,0 +1,975 @@
+﻿QN=1	(Choose 1 answer) 
+
+The latest scores from the Japanese Baseball League are in the table with schema 
+Scores(Team, Opponent, RunsFor, RunsAgainst)
+The data in this table is as follows (see picture):
+
+Suppose we would like to executethe following query:
+  SELECT Team, Opponent
+  FROM Scores
+  WHERE Team LIKE '% %' OR
+   Opponent LIKE '_i%'
+
+Identify, in the list below, a row of the result.
+
+A. (Hawks, Marines)
+
+B. (Swallows, Carp)
+
+C. (Golden Eagles, Lions)
+
+D. (Giants,Bay Stars)
+
+
+
+
+QN=2	(Choose 1 answer) 
+
+Choose the in-correct statement:
+
+A. ROLLING back a transaction rejects any of the changes resulting from the SQL statements in the transaction
+
+B. COMMITTING a transaction makes permanent the changes resulting from all SQL statements in the transaction
+
+C. When the sequence of tasks is complete, the SAVE POINT closes the transaction
+
+D. In SQL Server, every DML operation is a transaction regardless of whether it has a BEGIN TRANSACTION or not
+
+
+
+
+QN=3	(Choose 1 answer) 
+
+Every row and value must agree with all constraints right after the transaction is complete. 
+The above describes which property of a transaction?
+
+A. Consistency
+
+B. Atomic
+
+C. Durability
+
+D. Isolation
+
+
+
+
+QN=4	(Choose 1 answer) 
+
+The table Arc(x,y) currently has the following tuples (note that there are duplicates): (1,2), (1,2), (2,3), (3,4), (3,4), (4,1), (4,1), (4,1), (4,2). Compute the result of the query: 
+
+SELECT a1.x, a2.y, COUNT(*)
+  FROM Arc a1, Arc a2
+  WHERE a1.y = a2.x
+  GROUP BY a1.x, a2.y;
+ 
+ Which of the following tuples is in the result?
+
+A. (3,2,6)
+
+B. (2,4,6)
+
+C. (3,1,6)
+
+D. (3,1,2)
+
+E. (1,3,4)
+
+
+
+
+QN=5	(Choose 1 answer) 
+
+The following ER diagram shows that one class can contains multiple students, but one student only belongs to one class. Which attribute that is deleted will allow the entity set to be replaced by an attribute?
+
+A. Student name
+
+B. Class name
+
+C. Class ID
+
+D. Student ID
+
+
+
+
+QN=6	(Choose 1 answer) 
+
+Suppose relation R(a,b,c) has the following tuples (see figure) 
+ 
+Which tuple is contained in the result of the following query:
+
+SELECT a, COUNT(DISTINCT B) FROM R
+GROUP BY a
+HAVING SUM(B) >3;
+
+A. (2,3)
+
+B. (3,7)
+
+C. (2,10)
+
+D. (3,12)
+
+
+
+
+QN=7	(Choose 1 answer) 
+
+Consider the following statement:
+ 
+“When drawing ERD, you should avoid introducing more elements into your design than necessary”
+ 
+That above statement describes which principle?
+
+A. Faithfulness principle
+
+B. Avoid Redundancy Principle
+
+C. Limit the use of weak entity sets principle
+
+D. Simplicity Count Principle
+
+
+
+
+QN=8	(Choose 1 answer) 
+
+A set of attributes forms a ____ for a relation if we do not allow 2-tuples in a relation instance to have the same values in all that attributes
+
+A. Key
+
+B. Foreign Key
+
+C. Trigger Key
+
+D. Index Key
+
+
+
+
+QN=9	(Choose 1 answer) 
+
+Which of the following are guidelines for designing the relational schema ?
+
+A. Reduce the redundant values in tuples
+
+B. Reduce the NULL values in tuples
+
+C. Always make relations 3NF
+
+D. All of the others
+
+
+
+
+QN=10	(Choose 1 answer) 
+
+What is an Entity Set?
+
+A. None of the others
+
+B. It is a collection (set) of entities that have same attributes
+
+C. It is a collection of entities of a particular entity type grouped together into an entity set.
+
+D. It is a “thing” in the real world with an independent existence.
+
+
+
+
+QN=11	(Choose 1 answer) 
+
+How to eliminate anomalies when we design a database?
+
+A. None of the others
+
+B. We should union relations to eliminate anomalies
+
+C. We should join relations  to eliminate anomalies
+
+D. We should decompose relation to eliminate anomalies
+
+
+
+
+QN=12	(Choose 1 answer) 
+
+Consider the law, that holds for set relations:
+(S intersect T) - R = S intersect (T - R).
+The above law still hold for bag relations?
+
+A. True
+
+B. False
+
+
+
+
+QN=13	(Choose 1 answer) 
+
+Suppose we have a relation with schema 
+  R(A, B, C, D, E, F, G, H)  
+
+If we issue a query of the form
+  SELECT ...
+  FROM R
+  WHERE ...
+  GROUP BY B, E, C, D
+  HAVING ???
+   
+Identify, in the list below, the term that CAN NOT appear in the HAVING condition (represented by ??? in the above query).
+
+A. H
+
+B. B+E
+
+C. COUNT(A)
+
+D. SUM(H)
+
+
+
+
+QN=14	(Choose 1 answer) 
+
+How many columns we can create in a table?
+
+A. 128
+
+B. 256
+
+C. As much as you want
+
+D. Depends on the DBMS
+
+
+
+
+QN=15	(Choose 1 answer) 
+
+In SQL , the command/statement that let you add an attribute to a relation schema is …….
+
+A. None of the others
+
+B. Update
+
+C. Alter
+
+D. Insert
+
+
+
+
+QN=16	(Choose 1 answer) 
+
+_____ integrity is an integrity rule which states that every table must have a primary key and that the column or columns chosen to be the primary key should be unique and not null
+
+A. Referential
+
+B. Domain
+
+C. None of the others
+
+D. Entity
+
+
+
+
+QN=17	(Choose 1 answer) 
+
+Suppose R and S are 2 relations. R is the parent of S.
+And the relationship between R and S is set to 
+“ON DELETE CASCADE”.
+This means that:
+
+A. We can delete a row from R if that row has children in S (and in this case, the database server will raise up an error)
+
+B. We can delete a row from R although that row has children in S (and in this case, all the children will be deleted too)
+
+
+
+
+QN=18	(Choose 1 answer) 
+
+Column A of a relation has the following list of values in the six rows of the table:
+
+  NULL, NULL, 10, 10, 20, 30
+
+In SQL Server, which of the following is the correct value of 
+AVG(DISTINCT A)?
+
+A. 15
+
+B. NULL
+
+C. 10
+
+D. 20
+
+
+
+
+QN=19	(Choose 1 answer) 
+
+Suppose we have a relation R(A, B, C, D, E, F) with the following set of FDs:
+A->C
+DE-> F
+B->D
+Which is the KEY of R?
+
+A. AE
+
+B. AB
+
+C. BE
+
+D. ABE
+
+
+
+
+QN=20	(Choose 1 answer) 
+
+What is meant by the following relational algebra statement: STUDENT X COURSE
+
+A. Compute the left outer join between the STUDENT and COURSE relations
+
+B. Compute the full outer join between the STUDENT and COURSE relations
+
+C. Compute the natural join between the STUDENT and COURSE relations
+
+D. Compute the cartesian product between the STUDENT and COURSE relations
+
+
+
+
+QN=21	(Choose 1 answer) 
+
+(FALSE OR NULL) return:
+
+A. NULL
+
+B. None of the others
+
+C. FALSE
+
+D. TRUE
+
+
+
+
+QN=22	(Choose 1 answer) 
+
+When join R and S, we want to display all the records in R we must use:
+
+A. None of the others
+
+B. R INNER JOIN S
+
+C. R RIGHT OUTER JOIN S
+
+D. R LEFT OUTER JOIN S
+
+
+
+
+QN=23	(Choose 1 answer) 
+
+Choose the correct statement.
+
+A. The action associated with the trigger executes no matter what the condition is hold or not.
+
+B. All of the others.
+
+C. When the trigger is awakened, it tests a condition. If the condition is satisfied, the action associated with the trigger is executed.
+
+D. Triggering events do not support INSERT and DELETE.
+
+
+
+
+QN=24	(Choose 1 answer) 
+
+Given a relation R(A,B,C,D). Which of the followings is trivial?
+
+A. A->->AB (->->: notation of multivalued dependency)
+
+B. A->->BCD (->->: notation of multivalued dependency)
+
+C. A->AB
+
+D. A->BCD
+
+
+
+
+QN=25	(Choose 1 answer) 
+
+What is the difference between the 2NF and the 3NF?
+
+A. 2NF deals with transitive functional dependency, while 3NF deals with partial functional dependency
+
+B. 2NF deals with partial functional dependency, while 3NF deals with transitive functional dependency
+
+
+
+
+QN=26	(Choose 1 answer) 
+
+Choose one right answer.
+
+A. Arithmetic operators on NULL values will return a NULL value
+
+B. Comparisons with NULL values will return UNKNOWN
+
+C. NULL value is unknown, inapplicable
+
+D. All of the others.
+
+
+
+
+QN=27	(Choose 1 answer) 
+
+What is a database?
+
+A. A database is a collection of information that is organized so that it can easily be accessed, managed, and updated
+
+B. A database is a collection of data files
+
+C. A database is a collection of tuples
+
+D. A database is a collection of records
+
+
+
+
+QN=28	(Choose 1 answer) 
+
+Suppose that tuple t appears, respectively, x, y, and z times in the relations X, Y, and Z. Let t appear w times in the relation: 
+X union (Y intersect Z).
+Which of the following inequalities is true ?
+
+A. w <= x+y
+
+B. w <= y+z
+
+C. w <= max(x,y)
+
+D. w >= z
+
+
+
+
+QN=29	(Choose 1 answer) 
+
+Consider a relation R(A,B,C,D,E) with functional dependencies 
+AB->C, 
+B->D, and 
+C->E. 
+What is the key  for R (choose one)
+
+A. AC
+
+B. AD
+
+C. AB
+
+D. AE
+
+
+
+
+QN=30	(Choose 1 answer) 
+
+In database design processes, data requirements are expressed through _________ 
+(a) Schema Design
+(b) ERD
+(c) Data Dictionary
+(d) Table Design
+
+A. (b) and (c)
+
+B. (a) and (b)
+
+C. (d) and (a)
+
+D. (c) and (d)
+
+
+
+
+QN=31	(Choose 1 answer) 
+
+What does the keyword ESCAPE mean?
+
+A. The keyword ESCAPE is used to match any string that contains the characters "?" or "*"
+
+B. The keyword ESCAPE is used to match any string that contains the characters "%" or "_"
+
+C. The keyword ESCAPE is used to match any string that contains the characters "@" or "$"
+
+D. There is no keyword named ESCAPE
+
+
+
+
+QN=32	(Choose 1 answer) 
+
+Suppose X is a number, and can be NULL. The result of expression: (X - X) always returns 0?
+
+A. False
+
+B. True
+
+
+
+
+QN=33	(Choose 1 answer) 
+
+What one is a wildcard used for pattern matching?
+
+A. “?” (for multi-character substitution)
+
+B. “?” (for single character substitution)
+
+C. “%” (for multi-character substitution)
+
+
+
+
+QN=34	(Choose 1 answer) 
+
+A ____ is a powerful tool for creating and managing large amounts of data efficiently and allowing it to persist over long periods of time, safely
+
+A. None of the others
+
+B. Database
+
+C. Excel
+
+D. DBMS
+
+
+
+
+QN=35	(Choose 1 answer) 
+
+When joining 2 relations, if we want to display all the records in that 2 relations, we must use:
+
+A. RIGHT OUTER JOIN
+
+B. FULL OUTER JOIN
+
+C. LEFT OUTER JOIN
+
+
+
+
+QN=36	(Choose 1 answer) 
+
+What type of key is used to reference another table?
+
+A. Primary Key
+
+B. Candidate Key
+
+C. Foreign Key
+
+D. Unique Key
+
+
+
+
+QN=37	(Choose 1 answer) 
+
+A 2NF table can exhibit ____ dependency.
+
+A. partial
+
+B. transitive
+
+C. indirect
+
+D. complete
+
+
+
+
+QN=38	(Choose 1 answer) 
+
+What is a graph database?
+
+A. None of the others
+
+B. A graph database is a database that uses graph structures with nodes, edges and properties to represent and store information
+
+C. A graph database is a database that uses tree structures with nodes to represent and store information
+
+D. A graph database is a database that uses table structures to represent and store information
+
+
+
+
+QN=39	(Choose 1 answer) 
+
+The SQL BETWEEN operator:
+
+A. Specifies that a column is a primary key.
+
+B. None of the others
+
+C. Specifies which tables we are selecting from.
+
+D. Specifies a range to test.
+
+
+
+
+QN=40	(Choose 1 answer) 
+
+A tuple which fails to participate in a join is called:
+
+A. dangling tuple
+
+B. neighbor tuple
+
+C. child tuple
+
+D. parent tuple
+
+
+
+
+QN=41	(Choose 1 answer) 
+
+The relation R(A,B,C,D) has following FDs:
+{ A -> B ; B -> A ; A -> D ; D -> B }
+
+A. R is in 3NF
+
+B. None of the others
+
+C. R is not in 2NF
+
+D. R is not in 3NF
+
+
+
+
+QN=42	(Choose 1 answer) 
+
+Data Definition language (DDL) is used to ……
+
+A. declare database schemas
+
+B. All of the others
+
+C. query database and modify the database
+
+D. connect to database and query database
+
+
+
+
+QN=43	(Choose 1 answer) 
+
+Choose a correct statement:
+
+A. Foreign keys cannot have null values
+
+B. Primary keys cannot have a null value , but unique keys
+
+C. Super-keys cannot have null values
+
+D. Unique keys cannot have a null value, but a primary keys
+
+
+
+
+QN=44	(Choose 1 answer) 
+
+For what values of x, y, and z, including NULL, does the Boolean expression 
+     x <= 4 OR NOT(y >= 2 AND z = 10)
+have the truth value FALSE? Identify one of those values from the list below
+
+A. x = NULL, y = 3, z = 10.
+
+B. x = NULL, y = 2, z = 10.
+
+C. x = 5, y = 3, z = 10
+
+D. x = 3, y = 1, z = 10.
+
+
+
+
+QN=45	(Choose 2 answers) 
+
+When you normalize a relation by breaking it into two smaller relations, what must you do to maintain data integrity? (choose two options)
+
+
+
+A. Remove any functional dependencies from both relations
+
+B. Assign both relations the same primary key field(s)
+
+C. Create a primary key(s) for the new relation
+
+D. Link the relations by a common field.
+
+
+
+
+QN=46	(Choose 1 answer) 
+
+Given relations R(A,B) and S(B,C,D). The result of natural join of the relations R and S has
+
+A. Attributes A, B, C, D
+
+B. Only attribute B
+
+C. None of the others
+
+D. Only two attributes R.B and S.B
+
+
+
+
+QN=47	(Choose 1 answer) 
+
+Consider the law, that holds for set relations:
+(R natural join S) natural join T = R natural join (S natural join T).
+Does the above law still hold for bag relations?
+
+A. False
+
+B. True
+
+
+
+
+QN=48	(Choose 1 answer) 
+
+Here are three relations, R(A,B), S(C,D), (see figure):
+
+Compute the result of the query:
+
+     SELECT A, B, C, D
+     FROM R LEFT OUTER JOIN S
+          ON R.A = S.C
+
+Identify, in the list below, the row that appears in the result.
+
+A. (4, 7, 0, 1)
+
+B. (4, 7, null, null)
+
+C. (4, 7, 1, 0)
+
+D. (4, 7, 2, 1)
+
+
+
+
+QN=49	(Choose 1 answer) 
+
+When we apply set operators (UNION, INTERSECT, EXCEPT) to two relations R and S, which conditions on R and S must be satisfied?
+
+A. Before we compute the set-theoretic union, intersection, or difference of sets of tuples, the columns of R and S must be ordered so that the order of attributes is the same for both relations
+
+B. All of the others
+
+C. R and S must have schemas with identical sets of attributes and the types (domains) for each attribute must be the same in R and S
+
+
+
+
+QN=50	(Choose 1 answer) 
+
+A _____ is a  language for defining data structures
+
+A. None of the others
+
+B. DDL
+
+C. DML
+
+D. DCL
+
+
+
+
+QN=51	(Choose 1 answer) 
+
+The relation R(ABCD) has following FDs:
+{ ABD -> C ; 
+CD -> A ; 
+AC -> B ; 
+AC -> D }
+
+Choose a correct statement about R?.
+
+A. None of the others
+
+B. R is in 3NF
+
+C. R is not in 3NF
+
+D. R is not in 2NF
+
+
+
+
+QN=52	(Choose 1 answer) 
+
+A person who is responsible for the structure or schema of the database is called:
+
+A. an end user
+
+B. a database administrator
+
+C. all of the others
+
+D. a database analyst
+
+
+
+
+QN=53	(Choose 1 answer) 
+
+Except for _____, aggregate functions ignore null values
+
+A. MAX
+
+B. COUNT
+
+C. MIN
+
+D. AVG
+
+E. SUM
+
+
+
+
+QN=54	(Choose 1 answer) 
+
+What is a functional dependency?
+
+A. A functional dependency (A->B) occurs when the attribute B uniquely determines A
+
+B. A functional dependency (A->B) occurs when the attribute A uniquely determines B
+
+
+
+
+QN=55	(Choose 1 answer) 
+
+Here are three relations, R(A,B), S(C,D), and T(E,F). (see figure)
+
+Compute the result of the query:
+
+     SELECT A, F, SUM(C), SUM(D)
+     FROM R, S, T
+     WHERE B = C AND D = E
+     GROUP BY A, F
+     HAVING COUNT(*) > 1
+
+Identify, in the list below, the row that appears in the result.
+
+A. None of the others
+
+B. (1,1,2,1)
+
+C. (1,1,2,2)
+
+D. (1,1,1,1)
+
+
+
+
+QN=56	(Choose 1 answer) 
+
+Consider the following statement:
+ 
+“When drawing ERD, you should avoid drawing entities that can not be uniquely identified by their own attributes”
+ 
+That above statement describes which principle?
+
+A. Avoid Redundancy Principle
+
+B. Simplicity Count Principle
+
+C. Limit the use of weak entity sets principle
+
+D. Faithfulness principle
+
+
+
+
+QN=57	(Choose 1 answer) 
+
+A trigger is…
+
+A. a special type of table
+
+B. a special type of store procedure, executed when certain event occurs
+
+C. None of the others
+
+D. a special type of view
+
+
+
+
+QN=58	(Choose 1 answer) 
+
+Which SQL keyword is used to sort the result-set?
+
+A. ORDER
+
+B. ORDER BY
+
+C. SORT
+
+D. SORT BY
+
+
+
+
+QN=59	(Choose 1 answer) 
+
+Look at the following statements:
+(a) For any relation schema, there is a dependency-preserving decomposition into 3NF
+(b) For any relation schema, there is not dependency-preserving decomposition into 3NF
+(c) For any relation schema, there is dependency-preserving decomposition into BCNF
+(d) For some relation schema, there is not dependency-preserving decomposition into BCNF
+
+A. (a) and (c) are true
+
+B. (a) and (d) are true
+
+C. (b) and (d) are true
+
+D. (a) and (b) are true
+
+
+
+
+QN=60	(Choose 1 answer) 
+
+What SQL keyword can be used to return data from two non-related tables as a combined set of rows?
+
+A. DISTINCT ALL
+
+B. DISTINCT
+
+C. COMBINED
+
+D. UNION ALL
+
+
+
+

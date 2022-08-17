@@ -1,0 +1,8 @@
+No  | ID      | NAME           | WEIGHT (kg) | TYPE        | PLACE   | EXP. DATE (dd-mm-yyyy)
+
+1   | F002    | sua dau        | 0.30        | others      | cool    | 30-09-2021
+
+2   | F004    | rau cai        | 0.80        | vegetable   | cool    | 25-09-2021
+
+3   | F001    | sua chua       | 0.50        | abc         | ice     | 24-09-2021
+
