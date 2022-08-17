@@ -1,0 +1,210 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\froman\fcharset0 Times New Roman;}}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}}
+\viewkind4\uc1\pard\keepn\s1\sb240\sa60\qj\kerning32\b\f0\fs32 Operating Systems\par
+\pard\keepn\s2\sb240\sa60\qj\kerning0\fs28 Homework 4: Virtual Memory\par
+\pard\qj\b0\f1\fs24\par
+    Q1. When do page faults occur? Describe the actions taken by the OS when a page fault occurs.\par
+ \par
+    Sol: A page fault occurs whenever a process tries  to access a  page which is marked as invalid in the page table entry for that page. A page fault generates an interrupt which invokes the operating system code in privileged mode. The OS then examines some internal table (usually kept with the process control block for this process) to determine if the page is on disk. If the page is on disk (i.e. it really is a valid memory reference) the operating system then allocates a free frame, starts the disk I/O to read the desired page into the newly allocated frame, and starts the next process. When the disk I/O is finished, the internal table kept with the process and page tables are updated to indicate that the page is now in memory. The instruction that was interrupted by the illegal address trap is restarted. The process can now access the page as though it had always been in memory.\par
+\par
+Q2.   Suppose we have a system with 32 bit virtual addresses, in which the least-significant bits are used to indicate a 10-bit    page offset.\par
+\par
+   a) what is the page size in this system?\par
+\par
+   b) how many pages would it take to cover the entire virtual  address space?\par
+\par
+   c) if you only bought 16MB of physical memory, how many page frames do you have?\par
+\par
+   d) if page table entries are 64 bits long, how big of a single-level page table would you require to map all of virtual memory?\par
+\par
+Sol:\par
+ a) 2^10 Bytes = 1KB\par
+ b) 2^22 Pages\par
+ c) 16MB / 2^10 = 2^14 (Frames)\par
+ d) 2^22 * 64 = 2^28(bits) = 2^25 (Bytes)\par
+\par
+\par
+\par
+Q3  Suppose we have a demand-paged memory. The page table is held in registers. It takes 8 milliseconds to service a page fault if an empty frame is available or the replaced page is not modified, and 20 milliseconds if the replaced page is modified. Memory access time is 100 nanoseconds.\par
+\par
+Assume that the page to replaced is modified 70 percent of the time. What is the maximum acceptable page-fault rate for an effective access time of no more than 200 nanoseconds?\par
+\par
+Sol: We know how to find an effective access time (EAT) for a given page-fault rate (p). Here, we have to find 'p' for given 'EAT' so we set up the following equation and solve for 'p':\par
+(Note: 1 millisecond = 1,000,000 nanoseconds = 1e6 nanoseconds)\par
+      EAT = (1-p)*(100) + (p)*(100 + (1-.7)*(8msec) + (.7)*(20msec))   \par
+\tab   = 100 - 100p + 100p + (2.4e6)*p + (14e6)*p\par
+\tab   = 100 + (16.4e6)*p\par
+      200 = 100 + (16.4e6)*p\par
+      p = 100/16.4e6\par
+      \par
+\par
+Q4. Consider a program that generates a sequence of virtual address references that correspond to the following sequence of page references:\par
+\par
+      1,2,3,4,1,2,5,6,1,3,1,2,7,6,3,2,1,2,3,6\par
+\par
+   (i.e., first it references an address in page #1, then an address in page #2, then an address in page #3, etc.)\par
+\par
+   show how pages are populated in physical frames over time, and indicate where page faults occur, for each of the following cases:\par
+\par
+   a) LRU page replacement, for each subcase of:\par
+       i) one frame, ii) three frames, iii) 5 frames, iv) 7 frames\par
+\par
+   b) FIFO page replacement, for each subcase of:\par
+       i) one frame, ii) three frames, iii) 5 frames, iv) 7 frames\par
+\par
+   c) Optimal page replacement, for each subcase of:\par
+       i) one frame, ii) three frames, iii) 5 frames, iv) 7 frames\par
+\par
+\par
+   Did you see an instance of Belady's anomaly?  \par
+\par
+Sol: a) 1 frame: (^ indicates a page fault)\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^\par
+    3 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 4 4 4 5 5 5 3   3 7 7 7 2 2     2\par
+       2 2 2 1 1 1 6 6 6   2 2 2 3 3 3     3\par
+          3 3 3 2 2 2 1 1   1 1 6 6 6 1     6\par
+     ^ ^ ^ ^ ^ ^ ^ ^ ^ ^   ^ ^ ^ ^ ^ ^     ^\par
+    5 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 1       1 1    1      1\par
+       2 2 2       2 2    2      2\par
+          3 3       3 6    6      6\par
+             4       4 4    3      3\par
+                      5 5    5      7\par
+      ^ ^ ^ ^     ^ ^    ^       ^\par
+    7 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 1       1 1             1 \par
+       2 2 2       2 2             2\par
+          3 3       3 3             3\par
+             4       4 4             4\par
+                      5 5             5\par
+                         6             6\par
+                                        7\par
+    ^ ^ ^ ^       ^ ^             ^\par
+ b) 1 frame:\par
+    Same as a)\par
+\par
+    3 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 2 3 4 1 2 5 6   1 3 2 7 6 3     2\par
+       2 2 3 4 1 2 5 6 1   3 2 7 6 3 2     1\par
+          3 4 1 2 5 6 1 3   2 7 6 3 2 1     6\par
+    ^ ^ ^ ^ ^ ^ ^ ^ ^ ^   ^ ^ ^ ^ ^ ^     ^\par
+    5 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 1     1 2 3     4 5   6 \par
+       2 2 2     2 3 4     5 6   1\par
+          3 3     3 4 5     6 1   2\par
+             4     4 5 6     1 2   7\par
+                    5 6 1     2 7   3\par
+    ^ ^ ^ ^     ^ ^ ^     ^ ^   ^\par
+    7 frames:\par
+    Same as a)\par
+\par
+ c) 1 frame:\par
+    Same as a)\par
+\par
+    3 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 1       1 1    1       7 6       1       6\par
+       2 2 2       2 2    2       2 2       2       2\par
+          3 4       5 6    3       3 3       3       3\par
+    ^ ^ ^ ^       ^ ^    ^        ^ ^       ^       ^\par
+    5 frames:\par
+    1 2 3 4 1 2 5 6 1 3 1 2 7 6 3 2 1 2 3 6\par
+    ---------------------------------------\par
+    1 1 1 1      1 1             1\par
+       2 2 2      2 2             2\par
+          3 3      3 3             3\par
+             4      4 6             6\par
+                     5 5             7\par
+    ^ ^ ^ ^      ^ ^             ^\par
+    7 frames:\par
+    Same as a)\par
+\par
+ No cases exhibited Belady's anomaly for this sequence of virtual address references.\par
+ \par
+\par
+Q5.  What is the cause of thrashing? How could a system detect thrashing? Once it detects it, what can it do to eliminate the problem?\par
+\par
+Sol: In simple words, thrashing is a situation where whenever a process needs to run, it swaps out some other processes working set to disk. This happens when all the processes working set sizes sum to larger then the amount of physical memory available in the system.\par
+\par
+Thrashing  can be detected by the system when the CPU utilization starts decreasing and the number of page faults increases considerably.\par
+ \par
+To eliminate the problem, the system can either decrease the degree of multiprogramming or can use a local  (or priority) replacement algorithm.\par
+\par
+Q6.   Give reasons why the page size in a virtual memory system should be neither too large or too small.\par
+\par
+As the page size grows, more and more bits are used in the offset field, meaning the size of a page table can shrink.  Also, there are cache size ramifications. This is an advantage of having larger page size. However, as the page size grows, there is more and more fragmentation (since there are going to be more and more pages brought in that are not fully utilized).  It also takes a longer amount of time to bring in a very large page, which can be bad if you are not using much data on that page. This is why smaller page size is preferable. \par
+\par
+\par
+Q7. (20 points) Consider the two-dimensional array A:\par
+\par
+\tab int A[100][100];\par
+\par
+\tab where A[0][0] is at location 200, in a paged memory system with pages of size 200 bytes. Each int type needs 4 bytes and A is stored in row-major order (as in C/C++). A small process is in page 0 (locations 0 to 199) for manipulating the array; thus, every instruction fetch will be from page 0. For three page frames, how many page faults are generated by the following array-initialization loops, using LRU replacement, and assuming frame 0 has the process in it and the other two frames are initially empty?\par
+\par
+Sol:In this system, each page holds 50 integers and thus one row of A needs 2 pages and entire A needs 2 *100 = 200 pages.\par
+\par
+(a)    for (int I=0; I< 100; I++)\par
+\pard\fi720\qj for (int J=0; J < 100; J++)\par
+    A[I][J]=0;\par
+\pard\qj\par
+In this case, the array A is accessed row by row and thus each row generates 2 page faults as the first reference to a page always generates a page fault. Using LRU, it will generate 200 page faults.\par
+\par
+ (b)   for (int I=0; I< 100; I++)\par
+\pard\fi720\qj for (int J=0; J < 100; J++)\par
+    A[J][I]=0;\par
+\pard\qj\par
+In this case, the array A is accessed column by column and thus the process references 100 pages in each outside loop (I), which is the working set of the program. But we only have 2 frames, and thus each array reference will generate a page fault. Using LRU, it will generate 100 * 100 = 10,000 page faults.\par
+\par
+This example shows that a well-written program can be much faster than a program is not carefully written.\par
+\par
+Q8. A virtual memory system has a page size of 1024 words, eight virtual pages, and four physical page frames. The page table is as follows:\par
+\par
+Virtual page Number\tab Page Frame Number\par
+\par
+        0                        1\par
+        1                        0\par
+        2                        3\par
+        3                        -\par
+        4                        -\par
+        5                        2\par
+        6                        -\par
+        7                        -\par
+             \par
+\par
+            a. What is the size of the virtual address space? (How many bits in a virtual address?)\par
+\par
+\tab\tab 13 bits\par
+\par
+            b. What is the size of the physical address space? (How many bits in a physical address?)\par
+\par
+\tab\tab 12 bits\par
+\par
+            c. What are the physical addresses corresponding to the following decimal virtual addresses: 0, 3728, 1023, 1024, 1025, 7800, 4096?\par
+\par
+To solve this problem, you will have to first find the Virtual page number corresponding to the Virutal address, then find the corresponding  frame number from table given above and add the offset value to find out the actual physical address. If the Virtual page is not mapped to any physical frame number, this indicates a page fault.\par
+\par
+\tab\tab 0       000 00 0000 0000        01 00 0000 0000    \par
+\tab\tab 3728    011 10 1001 0000        Page Fault\par
+\tab\tab 1023    000 11 1111 1111        01 11 1111 1111\par
+\tab\tab 1024    001 00 0000 0000        00 00 0000 0000\par
+\tab\tab 1025    001 00 0000 0001        00 00 0000 0001\par
+\tab\tab 7800    111 10 0111 1000        Page Fault\par
+\tab\tab 4096    100 00 0000 0000        Page Fault\par
+\par
+}
+ 
