@@ -1,24 +1,4 @@
-import json
-
-data = '''
-[
-    { 
-        "id" : "001",
-        "x" : "2",
-        "name" : "Chuck"
-    },
-    {
-        "id" : "009",
-        "x" : "7",
-        "name" : "Brent"
-    }
-]'''
-
-info = json.loads(data)
-print('User count:', len(info))
-
-for item in info:
-    print('Name', item['name'])
-    print('Id', item['id'])
-    print('Attribute', item['x'])
-    print()
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+print(c)

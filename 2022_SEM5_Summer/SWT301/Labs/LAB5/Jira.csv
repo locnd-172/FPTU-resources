@@ -1,0 +1,42 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Labels,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Attachment,Attachment,Custom field (Actual end),Custom field (Actual start),Custom field (Affected services),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Development),Custom field (Epic Color),Custom field (Epic Link),Custom field (Epic Name),Custom field (Epic Status),Custom field (Impact),Custom field (Issue color),Custom field (Rank),Custom field (Request Type),Custom field (Request language),Custom field (Request participants),Satisfaction rating,Custom field (Start date),Custom field (Story point estimate),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field ([CHART] Date of First Response),Status Category
+Missing validation of input field in Add contract page,HMS-19,10018,Bug,To Do,HMS,HMS,software,Nguyen Dang Loc (K16_HCM),620145fceaf9e20070738f54,,Medium,,,,Nguyen Dang Loc,6141b8de481377006bbabee2,Nguyen Dang Loc,6141b8de481377006bbabee2,18/Jul/22 3:32 PM,18/Jul/22 3:32 PM,18/Jul/22 3:33 PM,,,0,,,"Value of currency input field must be divisible by 1000 (Rental fee per month, deposits).
+User entered an invalidate data like 589; -56; 'aaa'; etc. then system should display an error message.
+But currently the system still accepts the error data entered from the user.
+
+*Step to reproduce*:
+	1. Access add contract page.
+	2. Enter some random dump data in the ""Giá thuê theo tháng"" field like: 589; -56; 'aaa'; etc.
+	3. Enter some random dump data in the ""Tiền đặt cọc"" field like: 589; -56; 'aaa'; etc.
+	4. Enter a valid data for other fields.
+	5. Press ""Thêm hợp đồng""
+
+*Expected*: An error message like ""Số tiền phải là bội của 1000"" should be display and the system prevent user from submit the contract form.
+*Actual*: The contract is created successfully and user is navigated to Rental requestl list page.","Chrome 13, Window 11",Nguyen Dang Loc,6141b8de481377006bbabee2,,,,,,,,,,,,,,,,,,,,,,,,0|i0000n:,,,,,,,,,,,To Do
+Display a default  hostel list when user enter empty string in search keyword field,HMS-18,10017,Bug,To Do,HMS,HMS,software,Nguyen Dang Loc (K16_HCM),620145fceaf9e20070738f54,,Medium,,,,Nguyen Dang Loc,6141b8de481377006bbabee2,Nguyen Dang Loc,6141b8de481377006bbabee2,18/Jul/22 3:32 PM,18/Jul/22 3:32 PM,18/Jul/22 3:49 PM,,,0,,,"The user entered nothing to the search by keyword field and hit Search button. An empty page with no appropriate message.
+
+*Step to reproduce*:
+	1. Access hostel list page.
+	2. Enter nothing or some spacebar character in the ""Tìm kiếm theo tên nhà trọ"" field.
+	3. Click Search button.
+
+*Expected*: The recommendation hostel list should be display.
+*Actual*: Empty page with no hostel item, no paging indicator, no error or notice message is displayed.","Chrome 13, Window 11",Nguyen Dang Loc,6141b8de481377006bbabee2,,,,,,,,,,,,,,,,,,,,,,,,0|i0000f:,,,,,,,,,,,To Do
+Toggle a favorite hostel but it didn't work,HMS-17,10016,Bug,To Do,HMS,HMS,software,Nguyen Dang Loc (K16_HCM),620145fceaf9e20070738f54,,Medium,,,,Nguyen Dang Loc,6141b8de481377006bbabee2,Nguyen Dang Loc,6141b8de481377006bbabee2,18/Jul/22 3:32 PM,18/Jul/22 3:32 PM,18/Jul/22 3:49 PM,,,0,,,"After click on the heart icon of a hostel item in the list, the correspond hostel should be in the favorite list of the user.
+But when access favorite hostel list page, the hostel is not displayed.
+
+*Step to reproduce*:
+	1. Access hostel list page.
+	2. Click heart icon of a hostel.
+	3. Click ""Yêu thích"" to navigate to favorite hostel list.
+
+*Expected*: The correspond hostel should be display in the favorite list.
+*Actual*: The favorite list is not updated, cannot see the hostel which was toggled.","Chrome 13, Window 11",Nguyen Dang Loc,6141b8de481377006bbabee2,,,,,,,,,,,,,,,,,,,,,,,,0|i00007:,,,,,,,,,,,To Do
+Display a default  hostel list when user enter empty string in search keyword field,HMS-16,10015,Bug,To Do,HMS,HMS,software,Nguyen Dang Loc (K16_HCM),620145fceaf9e20070738f54,,Medium,,Nguyen Dang Loc,6141b8de481377006bbabee2,Nguyen Dang Loc,6141b8de481377006bbabee2,Nguyen Dang Loc,6141b8de481377006bbabee2,18/Jul/22 3:28 PM,18/Jul/22 3:28 PM,18/Jul/22 3:49 PM,,,0,Search,UX,"The user entered nothing to the search by keyword field and hit Search button. An empty page with no appropriate message.
+
+_Step to reproduce_:
+1. Access hostel list page.
+2. Enter nothing or some spacebar character in the ""Tìm kiếm theo tên nhà trọ"" field.
+3. Click Search button.
+
+_Expected_: The recommendation hostel list should be display.
+_Actual_: Empty page with no hostel item, no paging indicator, no error or notice message is displayed.","Chrom 13, WIndow 11",Nguyen Dang Loc,6141b8de481377006bbabee2,,,,,,,,,18/Jul/22 3:27 PM;6141b8de481377006bbabee2;bug1_1.png;https://pidolphin.atlassian.net/secure/attachment/10000/bug1_1.png,18/Jul/22 3:27 PM;6141b8de481377006bbabee2;bug1_2.png;https://pidolphin.atlassian.net/secure/attachment/10001/bug1_2.png,,,,,,,,,,,,,,0|hzzzzz:,,,,,,,,,,,To Do

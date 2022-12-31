@@ -1,0 +1,79 @@
+tester: locndse160199@fpt.edu.vn
+dev: locnd.fpt@gmail.com
+_________________________________________________________________________________________________________
+User authentication feature has problems with back button of the browser
+
+DESCRIPTION:
+After press Logout button in the navbar, user is navigate to homepage of the website.
+Then user press Back button of the browser, the previous page is display with logged in status.
+
+*Step to reproduce*:
+	1. Access the Hostel list page.
+	2. Open the navigation menu by click user avatar on the header.
+	3. Click "Đăng xuất" and you will be navigated to the homepage
+	4. Press Back button of the browser
+
+*Expected*: The Hostel list page is shown with UI for guest (header has button "Đăng nhập", "Đăng ký")
+*Actual*: The Hostel list page is shown with UI for tenant (a logged in user)
+
+_________________________________________________________________________________________________________
+Display a default  hostel list when user enter empty string in search keyword field
+
+DESCRIPTION:
+The user entered nothing to the search by keyword field and hit Search button. An empty page with no appropriate message.
+
+*Step to reproduce*:
+	1. Access hostel list page.
+	2. Enter nothing or some spacebar character in the "Tìm kiếm theo tên nhà trọ" field.
+	3. Click Search button.
+
+*Expected*: The recommendation hostel list should be display.
+*Actual*: Empty page with no hostel item, no paging indicator, no error or notice message is displayed. 
+
+_________________________________________________________________________________________________________
+Missing validation of input field in Add contract page
+
+DESCRIPTION:
+Value of currency input field must be divisible by 1000 (Rental fee per month, deposits).
+User entered an invalidate data like 589; -56; 'aaa'; etc. then system should display an error message.
+But currently the system still accepts the error data entered from the user.
+
+*Step to reproduce*:
+	1. Access add contract page.
+	2. Enter some random dump data in the "Giá thuê theo tháng" field like: 589; -56; 'aaa'; etc.
+	3. Enter some random dump data in the "Tiền đặt cọc" field like: 589; -56; 'aaa'; etc.
+	4. Enter a valid data for other fields.
+	5. Press "Thêm hợp đồng"
+
+*Expected*: An error message like "Số tiền phải là bội của 1000" should be display and the system prevent user from submit the contract form.
+*Actual*: The contract is created successfully and user is navigated to Rental requestl list page.
+
+_________________________________________________________________________________________________________
+Toggle a favorite hostel but it didn't work
+
+DESCRIPTION:
+After click on the heart icon of a hostel item in the list, the correspond hostel should be in the favorite list of the user.
+But when access favorite hostel list page, the hostel is not displayed.
+
+*Step to reproduce*:
+	1. Access hostel list page.
+	2. Click heart icon of a hostel.
+	3. Click "Yêu thích" to navigate to favorite hostel list.
+
+*Expected*: The correspond hostel should be display in the favorite list.
+*Actual*: The favorite list is not updated, cannot see the hostel which was toggled.
+
+_________________________________________________________________________________________________________
+Miss checking exist email in reset password page
+
+DESCRIPTION:
+In reset password page, the input email is not checked if it's exist in the database. This can lead to email sending to non-exist email.
+
+*Step to reproduce*
+	1. Access to forgot pasword page
+	2. Enter some random email in the "Email"
+	3. Click 'Send new password'
+
+*Expected*: An error message like "Email không tồn tại trong hệ thống!" and prevent the user from submitting the form
+*Actual*: The new password email is sent to the input email without checking its existence
+

@@ -1,0 +1,3 @@
+https://s3-us-west-2.amazonaws.com/unex-esl-mooc/Search+Terms/story.html
+
+https://s3-us-west-2.amazonaws.com/unex-esl-mooc/Evaluating+Sources+Practice/story_html5.html

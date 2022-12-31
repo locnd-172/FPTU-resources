@@ -1,0 +1,1 @@
+Counting words program Write a program to read through the file and  print frequency of words 

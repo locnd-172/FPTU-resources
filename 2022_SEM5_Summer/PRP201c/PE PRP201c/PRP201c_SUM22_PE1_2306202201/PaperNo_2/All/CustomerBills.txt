@@ -1,0 +1,6 @@
+ID	Name		Type	Number Of Kw
+KH001	Pham An Tin	A	100
+KH002	Ho Ngoc Hoa	B	200
+KH003	Le Van Nam	A	245
+KH004	Ngo Le Tuan	C	125
+KH005	Ho Thi Hong	B	95

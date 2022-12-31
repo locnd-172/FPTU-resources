@@ -1,0 +1,42 @@
+có 4 cách trích dẫn
+#1: direct quote with attribution
+#2: direct quote without attribution
+#3: paraphrase with attribution
+#4: paraphrase without attribution
+
+attribution là ghi tên tác giả trong sentence
+fullname k dùng initial kiểu P.Tung
+
+In-text citation:
+- MLA: 
+	+ 1 author: (author_lastname page_number)
+	vd: (Tung 69)
+	+ 2 authors: (Ton and ton 69)
+	+ >2: (Ton et al. 69) | "et al." luôn có dấu chấm sau "al"
+	+ nhieu page nhieu author: (Ton 69; Ton 96)
+	Có thể dùng source_title nếu không biết author
+
+- APA:
+	+ 1 author: (author_lastname, year, p. page_number)
+	vd: (Ton, 2015, p. 69)
+	thường thì có quote mới thêm page_number
+	+ 2 authors: (Ton & Ton, 2015)
+	+ >2: (Ton et al., 2015)
+
+Work cited:
+- MLA: 
+Author. Title _of_source. Title_of_container, Other_contributors, version, number, publisher, publication_date, location.
+Lastname của author để ở đầu, sort theo alphabet lastname nếu có nhiều entry
+
+- APA: Gọi là reference list
+Author, A. & Author, B. (YEAR). Title of the article: Subtitle of the article. Title of the Journal,
+volume number(issue number), page range. DOI (if available)
+____________________________________________
+Font size: 12pt
+Thường là times new roman
+Line spacing: double space
+No extra space between title and text
+1 inch margin
+Heading: Student name, Teacher name, Class name, Date (format: 23 December 2022)
+Left align (k justify)
+Running heading: student_name page_number ở góc trên bên phải

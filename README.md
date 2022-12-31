@@ -2,4 +2,4 @@
 
 Major: Software Engineering
 
-Semester: 5 out of 9
+Semester: 6 out of 9

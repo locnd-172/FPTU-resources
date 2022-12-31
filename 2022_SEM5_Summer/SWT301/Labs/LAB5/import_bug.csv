@@ -1,0 +1,33 @@
+﻿Issue ID,Summary,Description,Reporter,Assignee,Priority,Environment
+HMS-10,Toggle a favorite hostel but it didn't work,"After click on the heart icon of a hostel item in the list, the correspond hostel should be in the favorite list of the user.
+But when access favorite hostel list page, the hostel is not displayed.
+
+*Step to reproduce*:
+	1. Access hostel list page.
+	2. Click heart icon of a hostel.
+	3. Click ""Yêu thích"" to navigate to favorite hostel list.
+
+*Expected*: The correspond hostel should be display in the favorite list.
+*Actual*: The favorite list is not updated, cannot see the hostel which was toggled.",Nguyen Dang Loc,Nguyen Vi Khang,Medium,"Chrome 13, Window 11"
+HMS-11,Display a default  hostel list when user enter empty string in search keyword field,"The user entered nothing to the search by keyword field and hit Search button. An empty page with no appropriate message.
+
+*Step to reproduce*:
+	1. Access hostel list page.
+	2. Enter nothing or some spacebar character in the ""Tìm kiếm theo tên nhà trọ"" field.
+	3. Click Search button.
+
+*Expected*: The recommendation hostel list should be display.
+*Actual*: Empty page with no hostel item, no paging indicator, no error or notice message is displayed. ",Nguyen Dang Loc,Nguyen Phat Dat,Medium,"Chrome 13, Window 11"
+,Missing validation of input field in Add contract page,"Value of currency input field must be divisible by 1000 (Rental fee per month, deposits).
+User entered an invalidate data like 589; -56; 'aaa'; etc. then system should display an error message.
+But currently the system still accepts the error data entered from the user.
+
+*Step to reproduce*:
+	1. Access add contract page.
+	2. Enter some random dump data in the ""Giá thuê theo tháng"" field like: 589; -56; 'aaa'; etc.
+	3. Enter some random dump data in the ""Tiền đặt cọc"" field like: 589; -56; 'aaa'; etc.
+	4. Enter a valid data for other fields.
+	5. Press ""Thêm hợp đồng""
+
+*Expected*: An error message like ""Số tiền phải là bội của 1000"" should be display and the system prevent user from submit the contract form.
+*Actual*: The contract is created successfully and user is navigated to Rental requestl list page.",Nguyen Dang Loc,Vu Thien An,Medium,"Chrome 13, Window 11"
